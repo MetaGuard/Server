@@ -1,0 +1,22 @@
+{
+  "name": "metaguard-server",
+  "version": "1.0.0",
+  "description": "NodeJS game server for evaluating MetaGuard.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MetaGuard/Server.git"
+  },
+  "author": "Vivek Nair <vivek@nair.me> (https://nair.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MetaGuard/Server/issues"
+  },
+  "homepage": "https://github.com/MetaGuard/Server#readme",
+  "dependencies": {
+    "ws": "^8.8.0"
+  }
+}
