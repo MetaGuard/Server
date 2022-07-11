@@ -7,7 +7,19 @@ var perSecond = 0;
 wss.on('connection', function connection(ws) {
   console.log('client connected!');
 
+  var ping = 0;
+
+  setInterval(() => {
+    ping = Date.now();
+    ws.send('ping');
+  }, 1000);
+
   ws.on('message', function message(data) {
+    data = data.toString()
+    // console.log(data)
+    if (data === 'pong') {
+      console.log('Ping: ' + (Date.now() - ping) + 'ms');
+    }
     // console.log('received: %s', data);
     perSecond++;
   });
